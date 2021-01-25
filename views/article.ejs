@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+        <html lang="en">
+            <%- include('partials/head.ejs') %>
+        <body>
+         
+            <%- include('partials/nav.ejs') %>
+           
+            <div class="container">
+                <h1><%= article.title %></h1>
+                <h5>Writen by <%= article.author %></h5>
+                <p><%= article.body %></p>
+                <hr>
+                <a class="btn btn-primary" href="/articles/edit/<%= article._id %>">Edit</a>
+                <a class="btn btn-danger delete-article" data-id="<%= article._id %>" href="#">Delete</a>
+
+            </div>
+            <%- include('partials/footer.ejs') %>
+        </body>
+        </html>
+        /article/edit/<%= article._id %>
+                
